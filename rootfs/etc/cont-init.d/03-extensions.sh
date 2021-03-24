@@ -1,8 +1,8 @@
 #!/usr/bin/with-contenv bash
 
 echo "Adding custom extensions..."
-mkdir -p /data/assets /data/extensions/.cache /data/storage
-touch /data/extensions/list
+# mkdir -p /data/assets /data/extensions/.cache /data/storage
+# touch /data/extensions/list
 
 # Auto-add extensions
 echo $'\n\
