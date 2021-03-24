@@ -62,5 +62,5 @@ if [ -s "/data/extensions/list" ]; then
   COMPOSER_CACHE_DIR="/data/extensions/.cache" su-exec flarum:flarum composer require --working-dir /opt/flarum ${extensions}
 fi
 
-su-exec flarum:flarum php flarum migrate
-su-exec flarum:flarum php flarum cache:clear
+yasu flarum:flarum php flarum migrate
+yasu flarum:flarum php flarum cache:clear
