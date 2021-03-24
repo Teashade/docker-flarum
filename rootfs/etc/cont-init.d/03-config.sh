@@ -190,14 +190,14 @@ yasu flarum:flarum cat > /opt/flarum/config.php <<EOL
 );
 EOL
 
-if [ -s "/data/extensions/list" ]; then
-  while read extension; do
-    test -z "${extension}" && continue
-    extensions="${extensions}${extension} "
-  done < /data/extensions/list
-  echo "Installing additional extensions..."
-  COMPOSER_CACHE_DIR="/data/extensions/.cache" yasu flarum:flarum composer require --working-dir /opt/flarum ${extensions}
-fi
+# if [ -s "/data/extensions/list" ]; then
+#   while read extension; do
+#     test -z "${extension}" && continue
+#     extensions="${extensions}${extension} "
+#   done < /data/extensions/list
+#   echo "Installing additional extensions..."
+#   COMPOSER_CACHE_DIR="/data/extensions/.cache" yasu flarum:flarum composer require --working-dir /opt/flarum ${extensions}
+# fi
 
 yasu flarum:flarum php flarum migrate
 yasu flarum:flarum php flarum cache:clear
