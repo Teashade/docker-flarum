@@ -56,10 +56,10 @@ if [ -s "/data/extensions/list" ]; then
     test -z "${extension}" && continue
     extensions="${extensions}${extension} "
   done < /data/extensions/list
-  echo "Installing additional custom extensions..."
-  COMPOSER_CACHE_DIR="/data/extensions/.cache" su-exec flarum:flarum composer config repositories.blomstra composer https://extiverse.com/composer/
-  COMPOSER_CACHE_DIR="/data/extensions/.cache" su-exec flarum:flarum composer config --global --auth bearer.extiverse.com ${EXTIVERSE_TOKEN}
-  COMPOSER_CACHE_DIR="/data/extensions/.cache" su-exec flarum:flarum composer require --working-dir /opt/flarum ${extensions}
+  echo "Installing additional customs extensions..."
+  COMPOSER_CACHE_DIR="/data/extensions/.cache" yasu flarum:flarum composer config repositories.blomstra composer https://extiverse.com/composer/
+  COMPOSER_CACHE_DIR="/data/extensions/.cache" yasu flarum:flarum composer config --global --auth bearer.extiverse.com ${EXTIVERSE_TOKEN}
+  COMPOSER_CACHE_DIR="/data/extensions/.cache" yasu flarum:flarum composer require --working-dir /opt/flarum ${extensions}
 fi
 
 yasu flarum:flarum php flarum migrate
