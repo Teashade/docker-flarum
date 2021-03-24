@@ -22,7 +22,7 @@ fof/realtimedate\n\
 nearata/flarum-ext-tags-color-generator\n\
 therealsujitk/flarum-ext-hljs\n\
 fof/drafts\n\
-fof/gamification\n\
+# fof/gamification\n\
 askvortsov/flarum-discussion-templates\n\
 fof/split\n\
 fof/merge-discussions\n\
@@ -35,7 +35,7 @@ fof/masquerade\n\
 fof/disposable-emails\n\
 fof/stopforumspam\n\
 fof/filter\n\
-fof/html-errors\n\
+# fof/html-errors\n\
 fof/links\n\
 davwheat/custom-sidenav-links\n\
 fof/frontpage\n\
@@ -48,7 +48,7 @@ fof/analytics\n\
 fof/byobu\n\
 askvortsov/flarum-pwa\n\
 v17development/flarum-blog\n\
-v17development/flarum-seo\n\
+# v17development/flarum-seo\n\
 blomstra/payments'> /data/extensions/list
 
 if [ -s "/data/extensions/list" ]; then
